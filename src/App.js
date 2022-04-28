@@ -1,22 +1,13 @@
 import './App.css';
 
-function sum(a,b) {
-  return a + b;
-}
-
-function primeiroJSX() {
-  return(
-    <div>
-      Murilo - Introdução ao ReactJS
-      <h1>Soma: {sum(10, 20)}</h1>
-    </div>
-  )
-}
+const element = 'Digital Innovation';
+const element2 = <h1>Olá Turma =D</h1>;
 
 function App() {
   return (
     <div className='App'>
-      {primeiroJSX()}
+      {element}
+      {element2}
     </div>
   );
 }
