@@ -1,13 +1,15 @@
 import './App.css';
+import Button from './Button'
 
-const element = 'Digital Innovation';
-const element2 = <h1>Olá Turma =D</h1>;
+function soma(a,b) {
+  alert (a + b);
+}
 
 function App() {
   return (
     <div className='App'>
-      {element}
-      {element2}
+      10+20<Button onClick={() => soma(10,20)} name="Soma" />
+
     </div>
   );
 }
