@@ -1,17 +1,40 @@
+import { Component } from 'react';
 import './App.css';
-import Button from './Button'
 
-function soma(a,b) {
-  alert (a + b);
-}
 
-function App() {
-  return (
-    <div className='App'>
-      10+20<Button onClick={() => soma(10,20)} name="Soma" />
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-    </div>
-  );
+    this.state = {
+      clock: 1000,
+      copo: 'água'
+    }
+  }
+
+  componentDidMount() {
+    window.setTimeout (()=> {
+      this.setState({
+        copo:'suco'
+      })
+    },3000)
+  }
+
+  alterarCopo = () => {
+    this.setState({
+      copo: 'refrigerante'
+    })
+  }
+
+  render() {
+    const {clock, copo} = this.state
+    return(
+      <div>
+        <h1>{clock}</h1>
+        <button onClick={() => this.alterarCopo()}><h1>{copo}</h1></button>
+      </div>
+    )
+  }
 }
 
 export default App;
